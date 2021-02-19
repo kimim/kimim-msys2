@@ -61,5 +61,5 @@ unset _ps1_symbol
 # Uncomment to use the terminal colours set in DIR_COLORS
 # eval "$(dircolors -b /etc/DIR_COLORS)"
 
-export PATH=/c/Users/kimim/.cargo/bin/:$PATH
 export PATH=/usr/local/lib/graalvm-ce-java11-21.0.0/bin/:/usr/local/lib/graalvm-ce-java11-21.0.0/languages/js/bin/:$PATH
+export PATH=/CTEX/MiKTeX/miktex/bin:$PATH
