@@ -65,3 +65,4 @@ export PATH=/usr/local/lib/graalvm-ce-java11-21.0.0/bin/:/usr/local/lib/graalvm-
 export PATH=/CTEX/MiKTeX/miktex/bin:$PATH
 export LC_ALL=en_US.UTF-8
 export JAVA_TOOL_OPTIONS="-Duser.language=en"
+export JAVA_HOME=`cygpath -w /usr/local/lib/graalvm-ce-java11-21.0.0`
