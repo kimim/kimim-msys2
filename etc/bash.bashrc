@@ -63,3 +63,5 @@ unset _ps1_symbol
 
 export PATH=/usr/local/lib/graalvm-ce-java11-21.0.0/bin/:/usr/local/lib/graalvm-ce-java11-21.0.0/languages/js/bin/:$PATH
 export PATH=/CTEX/MiKTeX/miktex/bin:$PATH
+export LC_ALL=en_US.UTF-8
+export JAVA_TOOL_OPTIONS="-Duser.language=en"
