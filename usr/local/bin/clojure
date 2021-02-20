@@ -423,7 +423,7 @@ else
       exec_args+=("--aliases" "$exec_aliases")
     fi
     #exec "$JAVA_CMD" "${jvm_cache_opts[@]}" "${jvm_opts[@]}" "-Dclojure.basis=$basis_file" -classpath "$cp:$install_dir/libexec/exec.jar" clojure.main -m clojure.run.exec "${exec_args[@]}" "$@"
-    exec "$JAVA_CMD" "${jvm_cache_opts[@]}" "${jvm_opts[@]}" "-Dclojure.basis=$basis_file" -classpath "$cp;D:\\msys64\\usr\\local\\lib\\clojure\\libexec\\exec.jar" clojure.main -m clojure.run.exec "${exec_args[@]}" "$@"
+    exec "$JAVA_CMD" "${jvm_cache_opts[@]}" "${jvm_opts[@]}" "-Dclojure.basis=$basis_file" -classpath "$cp;`cygpath -w $install_dir/libexec/exec.jar`" clojure.main -m clojure.run.exec "${exec_args[@]}" "$@"
   else
     if [[ -e "$main_file" ]]; then
       main_cache_opts=($(cat "$main_file"))
