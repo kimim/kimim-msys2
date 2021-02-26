@@ -12,3 +12,10 @@ curl https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -o 
 chmod +x lein
 mv lein /usr/local/bin
 lein
+
+# unzip
+pacman -S unzip
+
+# go
+pacman -S mingw64/mingw-w64-x86_64-go
+GO111MODULE=on go get golang.org/x/tools/gopls@latest
