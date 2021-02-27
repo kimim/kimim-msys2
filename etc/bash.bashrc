@@ -60,12 +60,3 @@ unset _ps1_symbol
 
 # Uncomment to use the terminal colours set in DIR_COLORS
 # eval "$(dircolors -b /etc/DIR_COLORS)"
-
-export LC_ALL=en_US.UTF-8
-export JAVA_TOOL_OPTIONS="-Duser.language=en"
-export JAVA_HOME=`cygpath -w /usr/local/lib/graalvm-ce-java11-21.0.0`
-
-export PATH=$PATH:/usr/local/lib/graalvm-ce-java11-21.0.0/bin/
-export PATH=$PATH:/usr/local/lib/graalvm-ce-java11-21.0.0/languages/js/bin/
-export PATH=$PATH:/CTEX/MiKTeX/miktex/bin
-export PATH=$PATH:$(cygpath $(go env GOPATH))/bin
