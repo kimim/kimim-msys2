@@ -22,3 +22,4 @@ GO111MODULE=on go get golang.org/x/tools/gopls@latest
 
 # graphviz for org-roam
 pacman -S mingw64/mingw-w64-x86_64-graphviz
+pacman -S mingw64/mingw-w64-x86_64-sqlite3
