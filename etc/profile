@@ -185,3 +185,4 @@ export PATH=$PATH:/usr/local/lib/graalvm-ce-java11-21.0.0/bin/
 export PATH=$PATH:/usr/local/lib/graalvm-ce-java11-21.0.0/languages/js/bin/
 export PATH=$PATH:/CTEX/MiKTeX/miktex/bin
 export PATH=$PATH:$(cygpath $(go env GOPATH))/bin
+export PATH=$PATH:/c/Windows/system32/WindowsPowerShell/v1.0
