@@ -1,0 +1,21 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.14.3
+  generator: "Rime::SwitcherSettings"
+  modified_time: "Fri Aug 28 10:44:28 2020"
+  rime_version: 1.5.3
+patch:
+  schema_list:
+    - {schema: luna_pinyin}
+    - {schema: luna_pinyin_simp}
+  punctuator:
+    full_shape:
+      __include: punctuation:/full_shape
+    half_shape:
+      __include: punctuation:/half_shape
+      '/' : '/'
+      '\': '、'
+      '`': ['、', '\', '＼', ／, '÷']
+      '~' : '~'
+      '*' : '*'                           # reserved for org-mode heading
+      '#' : ['#', ＊, ·, ・, ×, ※, ❂ ]  # help * to load some symbols
