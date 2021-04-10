@@ -26,3 +26,5 @@ pacman -S mingw64/mingw-w64-x86_64-sqlite3
 
 # turn Windows locale setting to support Unicode UTF-8 (Beta version currently)
 # then you can easily to click and open the Chinese or Korean file name link from org-roam-server
+
+pacman -S mingw64/mingw-w64-x86_64-ag
