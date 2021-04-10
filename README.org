@@ -16,3 +16,15 @@ The setting up steps:
    git reset origin/master
    git checkout -t origin/master
    #+end_src
+
+Currently, we need to modify some settings mannually:
+1. change last line of =org-protocol.reg=:
+   #+begin_src diff
+- @="\"D:\\msys64\\org-protocol.bat\"  \"%1\""
++ @="\"C:\\Users\kimim\msys64\\org-protocol.bat\"  \"%1\""
+   #+end_src
+2. change last line of =org-protocol.bat=:
+   #+begin_src diff
+- start "" "D:\msys64\mingw64\bin\emacsclientw.exe" -na "D:\msys64\mingw64\bin\runemacs.exe" "%URL%"
++ start "" "C:\Users\kimim\msys64\mingw64\bin\emacsclientw.exe" -na "C:\Users\kimim\msys64\mingw64\bin\runemacs.exe" "%URL%"
+   #+end_src
