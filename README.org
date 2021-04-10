@@ -1,0 +1,18 @@
+#+TITLE: MSYS64 with emacs, texlive and more
+
+This is a customized msys2 distro with additional applications for
+my daily use. Software and configurations include: mingw64 cli tools, emacs, texlive, doublecmd, firefox, sumatrapdf, rime, ...
+
+The setting up steps:
+
+1. install msys2 to anywhere, for example, =C:\Users\kimim\msys64=
+2. install texlive to =C:\Users\kimim\msys64\texlive=
+3. add customizations from http://github.com/kimim/kimim-msys2
+   #+begin_src shell
+   cd C:\Users\kimim\msys64
+   git init
+   git remote add origin http://github.com/kimim/kimim-msys2
+   git fetch
+   git reset origin/master
+   git checkout -t origin/master
+   #+end_src
