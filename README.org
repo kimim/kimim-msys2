@@ -16,7 +16,25 @@ The setting up steps:
    git reset origin/master
    git checkout -t origin/master
    #+end_src
+4. add more apps
+   #+begin_src shell
+pacman -S mingw64/mingw-w64-x86_64-emacs \
+       mingw64/mingw-w64-x86_64-rust \
+       mingw64/mingw-w64-x86_64-clang \
+       mingw64/mingw-w64-x86_64-go \
+       mingw64/mingw-w64-x86_64-python-pygments \
+       mingw64/mingw-w64-x86_64-graphviz \
+       mingw64/mingw-w64-x86_64-sqlite3 \
+       mingw64/mingw-w64-x86_64-ag
+   #+end_src
+5. add leiningen
+   #+begin_src shell
+curl https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -o lein
+chmod +x lein
+mv lein /usr/local/bin
+lein
 
+   #+end_src
 Currently, we need to modify some settings mannually:
 1. change last line of =org-protocol.reg=:
    #+begin_src diff
