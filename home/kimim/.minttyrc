@@ -1,3 +1,6 @@
 Font=Consolas
 FontHeight=16
 Scrollbar=none
+BackgroundColour=20,20,20
+Columns=100
+Rows=30
