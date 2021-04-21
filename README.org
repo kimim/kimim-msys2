@@ -4,6 +4,7 @@ This is a customized msys2 distro with additional applications for
 my daily use. Software and configurations include: mingw64 cli tools, emacs, texlive, doublecmd, firefox, sumatrapdf, rime, ...
 
 The setting up steps:
+
 * Basic installation
 
 1. install msys2 to anywhere, for example, =C:\Users\kimim\msys64=
@@ -28,6 +29,13 @@ pacman -S mingw64/mingw-w64-x86_64-emacs \
        mingw64/mingw-w64-x86_64-sqlite3 \
        mingw64/mingw-w64-x86_64-ag
    #+end_src
+
+* Info
+
+#+begin_src shell
+cd /mingw64/share/info
+ls *.info* | xargs -I {} install-info {} dir
+#+end_src
 
 * Clangd
 
@@ -57,3 +65,8 @@ Currently, we need to modify some settings mannually:
 - start "" "D:\msys64\mingw64\bin\emacsclientw.exe" -na "D:\msys64\mingw64\bin\runemacs.exe" "%URL%"
 + start "" "C:\Users\kimim\msys64\mingw64\bin\emacsclientw.exe" -na "C:\Users\kimim\msys64\mingw64\bin\runemacs.exe" "%URL%"
    #+end_src
+
+* Backup
+
+- Before backup, remove files under ~/var/cache/pacman/pkg/~
+- compress files excludes: ~home~, ~texlive~ and ~tmp~

@@ -1,3 +1,6 @@
+# Emacs & git
+pacman -S mingw64/mingw-w64-x86_64-emacs git
+
 # rust
 pacman -S mingw64/mingw-w64-x86_64-rust
 
@@ -5,7 +8,9 @@ pacman -S mingw64/mingw-w64-x86_64-rust
 pacman -S mingw64/mingw-w64-x86_64-python-pygments
 
 # clangd
-pacman -S mingw64/mingw-w64-x86_64-clang
+pacman -S mingw-w64-x86_64-clang
+pacman -S mingw-w64-x86_64-clang-analyzer
+pacman -S mingw-w64-x86_64-clang-tools-extra-11.0.0-8
 
 # leiningen
 curl https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -o lein
