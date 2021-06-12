@@ -192,3 +192,4 @@ export PATH=$PATH:/c/Windows/system32/WindowsPowerShell/v1.0
 # see https://tex.stackexchange.com/questions/347833/tex-live-on-windows-2016-cannot-find-pygmentize
 export PATH=$PATH:/c/Windows/system32
 export INFOPATH=$INFOPATH:/mingw64/share/info
+export PATH=/usr/lib/git-core:$PATH

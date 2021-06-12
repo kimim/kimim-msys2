@@ -37,6 +37,10 @@ cd /mingw64/share/info
 ls *.info* | xargs -I {} install-info {} dir
 #+end_src
 
+** Compile texi
+
+pacman -S msys/texinfo-tex mingw64/mingw-w64-x86_64-diffutils
+
 * Clangd
 
 #+begin_src shell
@@ -70,3 +74,19 @@ Currently, we need to modify some settings mannually:
 
 - Before backup, remove files under ~/var/cache/pacman/pkg/~
 - compress files excludes: ~home~, ~texlive~ and ~tmp~
+
+* Support SVG in Emacs
+
+https://www.emacswiki.org/emacs/EmacsSvg
+
+#+begin_src shell
+pacman -S mingw64/mingw-w64-x86_64-librsvg
+#+end_src
+
+#+begin_src emacs-lisp
+(auto-image-file-mode 1)
+#+end_src
+
+* C++
+
+- put =gsl= to =C:\Users\CNJIMA5\msys64\mingw64\include\c++\10.3.0\=
