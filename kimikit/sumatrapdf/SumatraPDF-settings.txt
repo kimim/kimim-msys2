@@ -30,6 +30,11 @@ ChmUI [
 	UseFixedPageUI = false
 ]
 ExternalViewers [
+	[
+		CommandLine = "C:\Program Files\Tracker Software\PDF Editor\PDFXEdit.exe" /A "page=%p;fullscreen=yes" "%1"
+		Name = PDFXEdit
+		Filter = *.pdf
+	]
 ]
 ShowMenubar = false
 ReloadModifiedDocuments = true
@@ -60,7 +65,7 @@ DefaultDisplayMode = automatic
 DefaultZoom = 200%
 WindowState = 2
 WindowPos = -2140 1233 1944 2108
-ShowToc = true
+ShowToc = false
 SidebarDx = 384
 TocDy = 0
 ShowStartPage = false
