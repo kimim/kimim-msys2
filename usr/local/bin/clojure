@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
-# Version = 1.10.1.754
-
 set -e
+
+install_dir=/usr/local/lib/clojure
+version=1.10.3.855
 
 function join { local d=$1; shift; echo -n "$1"; shift; printf "%s" "${@/#/$d}"; }
 
@@ -25,6 +26,14 @@ mode="repl"
 while [ $# -gt 0 ]
 do
   case "$1" in
+    -version)
+      >&2 echo "Clojure CLI version $version"
+      exit 0
+      ;;
+    --version)
+      echo "Clojure CLI version $version"
+      exit 0
+      ;;
     -J*)
       jvm_opts+=("${1:2}")
       shift
@@ -169,7 +178,7 @@ fi
 
 if "$help"; then
   cat <<-END
-	Version: 1.10.1.754
+	Version: $version
 
 	You use the Clojure tools ('clj' or 'clojure') to run Clojure programs
 	on the JVM, e.g. to start a REPL or invoke a specific function with data.
@@ -193,15 +202,15 @@ if "$help"; then
 	then use 'clojure'.
 
 	Usage:
-	  Start a REPL   clj     [clj-opt*] [-A:aliases] [init-opt*]
-	  Exec function  clojure [clj-opt*] -X[:aliases] [a/fn] [kpath v]*
-	  Run main       clojure [clj-opt*] -M[:aliases] [init-opt*] [main-opt] [arg*]
+	  Start a REPL   clj     [clj-opt*] [-Aaliases] [init-opt*]
+	  Exec function  clojure [clj-opt*] -X[aliases] [a/fn] [kpath v]*
+	  Run main       clojure [clj-opt*] -M[aliases] [init-opt*] [main-opt] [arg*]
 	  Prepare        clojure [clj-opt*] -P [other exec opts]
 
 	exec-opts:
-	 -A:aliases     Use aliases to modify classpath
-	 -X[:aliases]   Use aliases to modify classpath or supply exec fn/args
-	 -M[:aliases]   Use aliases to modify classpath or supply main opts
+	 -Aaliases      Use concatenated aliases to modify classpath
+	 -X[aliases]    Use concatenated aliases to modify classpath or supply exec fn/args
+	 -M[aliases]    Use concatenated aliases to modify classpath or supply main opts
 	 -P             Prepare deps - download libs, cache classpath, but don't exec
 
 	clj-opts:
@@ -218,6 +227,8 @@ if "$help"; then
 	 -Sthreads      Set specific number of download threads
 	 -Strace        Write a trace.edn file that traces deps expansion
 	 --             Stop parsing dep options and pass remaining arguments to clojure.main
+	 --version      Print the version to stdout and exit
+	 -version       Print the version to stderr and exit
 
 	init-opt:
 	 -i, --init path     Load a file or resource
@@ -242,10 +253,9 @@ END
   exit 0
 fi
 
-# Set dir containing the installed files
-install_dir=/usr/local/lib/clojure
-# use cygpath to convert linux path to win path for java.exe to understand
-tools_cp="$install_dir/libexec/clojure-tools-1.10.1.754.jar"
+# Set tools classpath used for the various programs before the user's program
+tools_cp="$install_dir/libexec/clojure-tools-$version.jar"
+
 # Determine user config directory
 if [[ -n "$CLJ_CONFIG" ]]; then
   config_dir="$CLJ_CONFIG"
@@ -309,7 +319,7 @@ basis_file="$cache_dir/$ck.basis"
 
 # Print paths in verbose mode
 if "$verbose"; then
-  echo "version      = 1.10.1.754"
+  echo "version      = $version"
   echo "install_dir  = $install_dir"
   echo "config_dir   = $config_dir"
   echo "config_paths =" "${config_paths[@]}"
@@ -395,7 +405,7 @@ elif "$describe"; then
     fi
   done
   cat <<-END
-	{:version "1.10.1.754"
+	{:version "$version"
 	 :config-files [$path_vector]
 	 :config-user "$config_user"
 	 :config-project "$config_project"
@@ -405,7 +415,7 @@ elif "$describe"; then
 	 :force $force
 	 :repro $repro
 	 :main-aliases "$main_aliases"
-	 :repl-aliases "$repl_aliases"}
+	 :repl-aliases "${repl_aliases[@]}"}
 END
 elif "$tree"; then
   exit 0
@@ -429,7 +439,7 @@ else
       main_cache_opts=($(cat "$main_file"))
     fi
     if [ "$#" -gt 0 ] && [ "$mode" == "repl" ]; then
-      >&2 echo "WARNING: When invoking clojure.main, use -M"
+      >&2 echo "WARNING: Use of -A with clojure.main is deprecated, use -M instead"
     fi
     exec "$JAVA_CMD" "${jvm_cache_opts[@]}" "${jvm_opts[@]}" "-Dclojure.basis=$basis_file" -classpath "$cp" clojure.main "${main_cache_opts[@]}" "$@"
   fi
