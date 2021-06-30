@@ -11,7 +11,7 @@ patch:
     emacs.exe: {ascii_mode: true}
     mintty.exe: {ascii_mode: true}
     run.exe: {ascii_mode: true}
-  "style/color_scheme": flypy
+  "style/color_scheme": google
   "style/display_tray_icon": true
   "style/horizontal": true
   "style/inline_preedit": false
