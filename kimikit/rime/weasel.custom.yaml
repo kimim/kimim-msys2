@@ -7,10 +7,14 @@ customization:
 patch:
   app_options:
     cmd.exe: {ascii_mode: true}
-    "emacs-w32.exe": {ascii_mode: true}
     emacs.exe: {ascii_mode: true}
+    emacsclientw.exe: {ascii_mode: true}
+    doublecmd.exe: {ascii_mode: true}
+    sumatrapdf.exe: {ascii_mode: true}  # no need for chinese input
     mintty.exe: {ascii_mode: true}
     run.exe: {ascii_mode: true}
+    searchui.exe: {ascii_mode: true}    # used as a shortcut for app
+    firefox.exe: {ascii_mode: true}     # I search for tech english more often
   "style/color_scheme": google
   "style/display_tray_icon": true
   "style/horizontal": true
