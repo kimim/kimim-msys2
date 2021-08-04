@@ -192,6 +192,8 @@ export PATH=$PATH:/c/Windows/system32/WindowsPowerShell/v1.0
 # see https://tex.stackexchange.com/questions/347833/tex-live-on-windows-2016-cannot-find-pygmentize
 export PATH=$PATH:/c/Windows/system32
 export INFOPATH=$INFOPATH:/mingw64/share/info
-export PATH=/kimikit/inkscape/bin:/usr/lib/git-core:$PATH
+export PATH=$PATH:/usr/local/lib/apache-ant-1.10.11/bin
+export PATH=$PATH:/usr/local/lib/apache-maven-3.8.1/bin
+export PATH=$PATH:/kimikit/inkscape/bin:/kimikit/doublecmd:/kimikit/firefox
 
 alias syu="pacman -Syu"
