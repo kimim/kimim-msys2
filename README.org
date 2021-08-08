@@ -90,3 +90,14 @@ pacman -S mingw64/mingw-w64-x86_64-librsvg
 * C++
 
 - put =gsl= to =C:\Users\CNJIMA5\msys64\mingw64\include\c++\10.3.0\=
+
+* nsswitch.conf
+
+remove db in nsswitch.conf:
+
+#+begin_example
+- passwd: files db
+- group: files db
++ passwd: files
++ group: files
+#+end_example

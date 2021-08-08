@@ -6,6 +6,7 @@ customization:
   rime_version: 1.5.3
 patch:
   app_options:
+# 只支持小写字母的app名字！
     cmd.exe: {ascii_mode: true}
     emacs.exe: {ascii_mode: true}
     emacsclientw.exe: {ascii_mode: true}

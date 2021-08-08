@@ -178,11 +178,13 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export LC_NUMERIC=en_US.UTF-8
-export JAVA_TOOL_OPTIONS="-Duser.language=en"
-export JAVA_HOME=`cygpath -w /usr/local/lib/graalvm-ce-java11-21.0.0`
+export JAVA_TOOL_OPTIONS="-Duser.language=en            \
+       -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=1080 \
+       -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=1080"
+export JAVA_HOME=`cygpath -w /usr/local/lib/graalvm-ce-java16-21.2.0`
 
-export PATH=$PATH:/usr/local/lib/graalvm-ce-java11-21.0.0/bin/
-export PATH=$PATH:/usr/local/lib/graalvm-ce-java11-21.0.0/languages/js/bin/
+export PATH=$PATH:/usr/local/lib/graalvm-ce-java16-21.2.0/bin/
+export PATH=$PATH:/usr/local/lib/graalvm-ce-java16-21.2.0/languages/js/bin/
 # export PATH=$PATH:/CTEX/MiKTeX/miktex/bin
 export PATH=$PATH:/texlive/2021/bin/win32
 # export PATH=$PATH:$(cygpath $(go env GOPATH))/bin
