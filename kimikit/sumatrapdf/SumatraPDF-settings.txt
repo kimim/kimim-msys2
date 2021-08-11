@@ -1,8 +1,8 @@
-﻿# For documentation, see https://www.sumatrapdfreader.org/settings/settings3.2.html
+﻿# For documentation, see https://www.sumatrapdfreader.org/settings/settings3-4.html
 
 MainWindowBackground = #e4dcc8
 EscToExit = false
-ReuseInstance = false
+ReuseInstance = true
 UseSysColors = false
 RestoreSession = true
 TabWidth = 300
@@ -13,12 +13,13 @@ FixedPageUI [
 	SelectionColor = #f5fc0c
 	WindowMargin = 2 4 2 4
 	PageSpacing = 4 4
+	HideScrollbars = true
 ]
 EbookUI [
 	FontName = Georgia
 	FontSize = 12.5
-	TextColor = #5f4b32
-	BackgroundColor = #fbf0d9
+	TextColor = #000000
+	BackgroundColor = #f4ecd8
 	UseFixedPageUI = false
 ]
 ComicBookUI [
@@ -28,6 +29,8 @@ ComicBookUI [
 ]
 ChmUI [
 	UseFixedPageUI = false
+]
+SelectionHandlers [
 ]
 ExternalViewers [
 	[
@@ -51,6 +54,11 @@ ForwardSearch [
 	HighlightColor = #6581ff
 	HighlightPermanent = false
 ]
+Annotations [
+	HighlightColor = #ffff00
+	TextIconColor = #ffff00
+	TextIconType =
+]
 CustomScreenDPI = 0
 
 RememberStatePerDocument = true
@@ -58,94 +66,26 @@ UiLanguage = en
 ShowToolbar = false
 ShowFavorites = false
 AssociateSilently = false
-CheckForUpdates = true
-RememberOpenedFiles = false
+CheckForUpdates = false
+RememberOpenedFiles = true
+InverseSearchCmdLine = notepad %f
 EnableTeXEnhancements = true
 DefaultDisplayMode = automatic
-DefaultZoom = 200%
+DefaultZoom = 200
 WindowState = 2
-WindowPos = -2140 1233 1944 2108
+WindowPos = 553 235 1334 1303
 ShowToc = false
-SidebarDx = 384
-TocDy = 0
+SidebarDx = 608
+TocDy = 776
+TreeFontSize = 0
 ShowStartPage = false
 UseTabs = false
 
 FileStates [
-	[
-		FilePath = C:\Users\CNJIMA5\OneDrive\books\Zhuangzi.pdf
-		Favorites [
-			[
-				Name = Other major themes in the Zhuangzi
-				PageNo = 10
-			]
-		]
-		IsPinned = false
-		IsMissing = false
-		OpenCount = 0
-		UseDefaultState = true
-	]
-	[
-		FilePath = C:\Users\CNJIMA5\OneDrive\papers\Learning\How to Take Smart Notes One Simple Technique to Boost Writing, Learning and Thinking - For Students, Academics and Nonfiction Book Writers by Sönke Ahrens (z-lib.org).pdf
-		Favorites [
-			[
-				Name = 4 A Few Things to Keep in Mind
-				PageNo = 35
-			]
-			[
-				Name = 11.1 Make a Career One Note at a Time
-				PageNo = 86
-			]
-		]
-		IsPinned = false
-		IsMissing = false
-		OpenCount = 0
-		UseDefaultState = true
-	]
-	[
-		FilePath = C:\Users\CNJIMA5\OneDrive\papers\math\ThinkStats2.pdf
-		Favorites [
-			[
-				Name = Outliers
-				PageNo = 42
-				PageLabel = 22
-			]
-		]
-		IsPinned = false
-		IsMissing = false
-		OpenCount = 0
-		UseDefaultState = true
-	]
-	[
-		FilePath = C:\Users\CNJIMA5\OneDrive\downloads\hopl-4-emacs-lisp.pdf
-		Favorites [
-			[
-				Name = 4.1 Symbols and Dynamic Scoping
-				PageNo = 11
-			]
-		]
-		IsPinned = false
-		IsMissing = false
-		OpenCount = 0
-		UseDefaultState = true
-	]
-	[
-		FilePath = C:\Users\CNJIMA5\OneDrive\papers\lisp\monnier2020evolution.pdf
-		Favorites [
-			[
-				Name = 4.1 Symbols and Dynamic Scoping
-				PageNo = 11
-			]
-		]
-		IsPinned = false
-		IsMissing = false
-		OpenCount = 0
-		UseDefaultState = true
-	]
 ]
 SessionData [
 ]
-TimeOfLastUpdateCheck = 30891913 1571586692
-OpenCountWeek = 545
+TimeOfLastUpdateCheck = 30893476 -1090743886
+OpenCountWeek = 553
 
 # Settings after this line have not been recognized by the current version
