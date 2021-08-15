@@ -2,7 +2,7 @@
 
 MainWindowBackground = #e4dcc8
 EscToExit = false
-ReuseInstance = true
+ReuseInstance = false
 UseSysColors = false
 RestoreSession = true
 TabWidth = 300
@@ -13,7 +13,7 @@ FixedPageUI [
 	SelectionColor = #f5fc0c
 	WindowMargin = 2 4 2 4
 	PageSpacing = 4 4
-	HideScrollbars = true
+	HideScrollbars = false
 ]
 EbookUI [
 	FontName = Georgia

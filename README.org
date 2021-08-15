@@ -1,7 +1,8 @@
 #+TITLE: MSYS64 with emacs, texlive and more
 
-This is a customized msys2 distro with additional applications for
-my daily use. Software and configurations include: mingw64 cli tools, emacs, texlive, doublecmd, firefox, sumatrapdf, rime, ...
+This is a customized msys2 distro with additional applications for my daily
+use. Software and configurations include: mingw64 cli tools, emacs, texlive,
+doublecmd, firefox, sumatrapdf, rime, ...
 
 The setting up steps:
 

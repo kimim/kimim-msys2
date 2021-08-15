@@ -174,6 +174,7 @@ if [ "$MAYBE_FIRST_START" = "true" ]; then
 fi
 unset MAYBE_FIRST_START
 
+
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
@@ -183,19 +184,31 @@ export JAVA_TOOL_OPTIONS="-Duser.language=en            \
        -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=1080"
 export JAVA_HOME=`cygpath -w /usr/local/lib/graalvm-ce-java16-21.2.0`
 
+# java option microsoft jdk
+# export PATH=$PATH:/kimikit/jdk-16.0.2+7/bin # JDK
+# java option graalvm jdk and js
 export PATH=$PATH:/usr/local/lib/graalvm-ce-java16-21.2.0/bin/
 export PATH=$PATH:/usr/local/lib/graalvm-ce-java16-21.2.0/languages/js/bin/
+
+# latex option: miktex
 # export PATH=$PATH:/CTEX/MiKTeX/miktex/bin
+# latex option: texlive
 export PATH=$PATH:/texlive/2021/bin/win32
+
 # export PATH=$PATH:$(cygpath $(go env GOPATH))/bin
-# powershell.exe is needed for cider-jack-in
+
+# powershell.exe is needed for cider-jack-in, DO NOT REMOVE
 export PATH=$PATH:/c/Windows/system32/WindowsPowerShell/v1.0
+
 # add system32 to let texlive find cmd.exe, then pygmentize can work
 # see https://tex.stackexchange.com/questions/347833/tex-live-on-windows-2016-cannot-find-pygmentize
 export PATH=$PATH:/c/Windows/system32
+
 export INFOPATH=$INFOPATH:/mingw64/share/info
 export PATH=$PATH:/usr/local/lib/apache-ant-1.10.11/bin
 export PATH=$PATH:/usr/local/lib/apache-maven-3.8.1/bin
 export PATH=$PATH:/kimikit/inkscape/bin:/kimikit/doublecmd:/kimikit/firefox
 
 alias syu="pacman -Syu"
+export https_proxy=127.0.0.1:1080
+export http_proxy=127.0.0.1:1080
