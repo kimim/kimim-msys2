@@ -102,3 +102,9 @@ remove db in nsswitch.conf:
 + passwd: files
 + group: files
 #+end_example
+
+* proxy
+
+#+begin_src shell
+pacman -S openssh-netcat
+#+end_src

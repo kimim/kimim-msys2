@@ -3,7 +3,7 @@
 set -e
 
 install_dir=/usr/local/lib/clojure
-version=1.10.3.933
+version=1.10.3.943
 
 function join { local d=$1; shift; echo -n "$1"; shift; printf "%s" "${@/#/$d}"; }
 
@@ -197,7 +197,7 @@ if "$help"; then
 	on the JVM, e.g. to start a REPL or invoke a specific function with data.
 	The Clojure tools will configure the JVM process by defining a classpath
 	(of desired libraries), an execution environment (JVM options) and
-	specifying a main class and args.
+	specifying a main class and args. 
 
 	Using a deps.edn file (or files), you tell Clojure where your source code
 	resides and what libraries you need. Clojure will then calculate the full
