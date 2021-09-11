@@ -19,8 +19,9 @@ The setting up steps:
    git reset origin/master
    git checkout -t origin/master
    #+end_src
-4. add more apps
-   #+begin_src shell
+
+* add more apps
+#+begin_src shell
 pacman -S mingw64/mingw-w64-x86_64-emacs \
        mingw64/mingw-w64-x86_64-rust \
        mingw64/mingw-w64-x86_64-clang \
@@ -29,9 +30,9 @@ pacman -S mingw64/mingw-w64-x86_64-emacs \
        mingw64/mingw-w64-x86_64-graphviz \
        mingw64/mingw-w64-x86_64-sqlite3 \
        mingw64/mingw-w64-x86_64-ag
-   #+end_src
+#+end_src
 
-* Info
+* Update Info dir
 
 #+begin_src shell
 cd /mingw64/share/info
@@ -101,6 +102,19 @@ remove db in nsswitch.conf:
 - group: files db
 + passwd: files
 + group: files
+#+end_example
+
+Then put passwd and group information to files:
+
+#+begin_src sh
+getent passwd $(id -u) > /etc/passwd
+getent group $(id -G) > /etc/group
+#+end_src
+
+Otherwise, you will get this kind of error, when you start a shell terminal:
+
+#+begin_example
+Could not fork child process: There are no available terminals (-1)
 #+end_example
 
 * proxy
