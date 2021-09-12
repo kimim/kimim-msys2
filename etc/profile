@@ -179,16 +179,16 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export LC_NUMERIC=en_US.UTF-8
-export JAVA_TOOL_OPTIONS="-Duser.language=en            \
-       -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=1080 \
-       -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=1080"
-export JAVA_HOME=`cygpath -w /usr/local/lib/graalvm-ce-java16-21.2.0`
+# export JAVA_TOOL_OPTIONS="-Duser.language=en            \
+#        -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=1080 \
+#        -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=1080"
+export JAVA_HOME=`cygpath -w /usr/local/lib/graalvm-ce-java11-21.0.0`
 
 # java option microsoft jdk
 # export PATH=$PATH:/kimikit/jdk-16.0.2+7/bin # JDK
 # java option graalvm jdk and js
-export PATH=$PATH:/usr/local/lib/graalvm-ce-java16-21.2.0/bin/
-export PATH=$PATH:/usr/local/lib/graalvm-ce-java16-21.2.0/languages/js/bin/
+export PATH=$PATH:/usr/local/lib/graalvm-ce-java11-21.0.0/bin/
+export PATH=$PATH:/usr/local/lib/graalvm-ce-java11-21.0.0/languages/js/bin/
 
 # latex option: miktex
 # export PATH=$PATH:/CTEX/MiKTeX/miktex/bin
@@ -210,5 +210,6 @@ export PATH=$PATH:/usr/local/lib/apache-maven-3.8.1/bin
 export PATH=$PATH:/kimikit/inkscape/bin:/kimikit/doublecmd:/kimikit/firefox
 
 alias syu="pacman -Syu"
-export https_proxy=127.0.0.1:1080
-export http_proxy=127.0.0.1:1080
+# export https_proxy=127.0.0.1:1080
+# export http_proxy=127.0.0.1:1080
+# export https_proxy=cn-s-xmprx01:8080
