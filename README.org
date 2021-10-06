@@ -11,8 +11,7 @@ The setting up steps:
 * Basic installation
 
 1. install msys2 to anywhere, for example, =C:\Users\kimim\msys64=
-2. install texlive to =C:\Users\kimim\msys64\texlive=
-3. add customizations from http://github.com/kimim/kimim-msys2
+2. add customizations from http://github.com/kimim/kimim-msys2
    #+begin_src shell
    cd C:\Users\kimim\msys64
    git init
@@ -38,7 +37,7 @@ setting:
 
 [[./kimikit/fix/color.reg]]
 
-* Add more MinGW tools
+* MinGW tools
 
 #+begin_src shell
 pacman -S mingw64/mingw-w64-x86_64-emacs \
@@ -53,49 +52,15 @@ pacman -S mingw64/mingw-w64-x86_64-emacs \
 
 #+RESULTS:
 
-* Update Info dir
+* TexLive
+Install TexLive to ~/texlive~
 
-#+begin_src shell
-cd /mingw64/share/info
-ls *.info* | xargs -I {} install-info {} dir
-#+end_src
+** beamer styles
 
-** Compile texi
-
-pacman -S msys/texinfo-tex mingw64/mingw-w64-x86_64-diffutils
-
-* C++
-
-** Add gsl lib
-- put =gsl= to =C:\Users\CNJIMA5\msys64\mingw64\include\c++\10.3.0\=
-
-** clangd
-
-#+begin_src shell
-pacman -S mingw-w64-x86_64-clang-tools-extra
-#+end_src
-
-* Java
-
-Java is required by Clojure.
-
-- Visit version tag at https://github.com/graalvm/graalvm-ce-builds/tags
-- Download ~graalvm-ce-java16-windows-amd64-21.x.x.zip~
-- Unzip to ~/usr/local/lib/graalvm-ce-java16-21.x.x~
-- Set ~PATH~ at [[./etc/profile]], for example:
-  #+begin_src sh
-  export JAVA_HOME=`cygpath -w /usr/local/lib/graalvm-ce-java11-21.0.0`
-  export PATH=$PATH:/usr/local/lib/graalvm-ce-java11-21.0.0/bin/
-  export PATH=$PATH:/usr/local/lib/graalvm-ce-java11-21.0.0/languages/js/bin/
-  #+end_src
-
-* Clojure
-
-#+begin_src shell
-curl https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -o lein
-chmod +x lein
-mv lein /usr/local/bin
-lein
+#+begin_src shell :exports code :eval no-export
+git clone git@github.com:kimim/beamertheme-kimim.git \
+    texlive/texmf-local/tex/latex/beamertheme-kimim
+mktexlsr
 #+end_src
 
 * Emacs
@@ -110,6 +75,163 @@ pacman -S mingw64/mingw-w64-x86_64-librsvg
 #+begin_src emacs-lisp
 (auto-image-file-mode 1)
 #+end_src
+
+* Update Info dir
+
+#+begin_src shell
+cd /mingw64/share/info
+ls *.info* | xargs -I {} install-info {} dir
+#+end_src
+
+** Compile texi
+
+pacman -S msys/texinfo-tex mingw64/mingw-w64-x86_64-diffutils
+
+* Development
+** C++
+
+*** Add gsl lib
+- put =gsl= to =C:\Users\CNJIMA5\msys64\mingw64\include\c++\10.3.0\=
+
+*** clangd
+
+#+begin_src shell
+pacman -S mingw-w64-x86_64-clang-tools-extra
+#+end_src
+
+** Java
+
+Java is required by Clojure.
+
+- Visit version tag at https://github.com/graalvm/graalvm-ce-builds/tags
+- Download ~graalvm-ce-java16-windows-amd64-21.x.x.zip~
+- Unzip to ~/usr/local/lib/graalvm-ce-java16-21.x.x~
+- Set ~PATH~ at [[./etc/profile]], for example:
+  #+begin_src sh
+  export JAVA_HOME=`cygpath -w /usr/local/lib/graalvm-ce-java11-21.0.0`
+  export PATH=$PATH:/usr/local/lib/graalvm-ce-java11-21.0.0/bin/
+  export PATH=$PATH:/usr/local/lib/graalvm-ce-java11-21.0.0/languages/js/bin/
+  #+end_src
+
+** Clojure
+
+#+begin_src shell
+curl https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -o lein
+chmod +x lein
+mv lein /usr/local/bin
+lein
+#+end_src
+
+* Applications
+** Inkscape
+https://inkscape.org/
+
+Inkscape is a Free and open source vector graphics editor for
+GNU/Linux, Windows and MacOS X. It offers a rich set of features and
+is widely used for both artistic and technical illustrations such as
+cartoons, clip art, logos, typography, diagramming and
+flowcharting. It uses vector graphics to allow for sharp printouts and
+renderings at unlimited resolution and is not bound to a fixed number
+of pixels like raster graphics. Inkscape uses the standardized SVG
+file format as its main format, which is supported by many other
+applications including web browsers.
+
+
+** GIMP
+https://www.gimp.org
+
+GIMP is a cross-platform image editor available for GNU/Linux, OS X,
+Windows and more operating systems. It is free software, you can
+change its source code and distribute your changes.
+
+Whether you are a graphic designer, photographer, illustrator, or
+scientist, GIMP provides you with sophisticated tools to get your job
+done. You can further enhance your productivity with GIMP thanks to
+many customization options and 3rd party plugins.
+
+** Freeplane
+https://www.freeplane.org/wiki/index.php/Home
+
+Freeplane is a free and open source software application that supports
+thinking, sharing information and getting things done at work, in
+school and at home. The software can be used for mind mapping and
+analyzing the information contained in mind maps.
+
+*** Change style
+
+Update ~Freeplane/resources/templates/standard-1.6.mm~
+- change some font size
+
+** LilyPond
+http://lilypond.org/
+
+LilyPond is a music engraving program, devoted to producing the
+highest-quality sheet music possible. It brings the aesthetics of
+traditionally engraved music to computer printouts. LilyPond is free
+software and part of the GNU Project.
+
+** Thunderbird
+https://www.thunderbird.net/
+
+Thunderbird is a free email application that's easy to set up and
+customize - and it's loaded with great features!
+
+*** Scale font size
+
+- Menu -> Preferences -> General -> Config Editor
+- search: "layout.css.devPixelsPerPx"
+- change the value from "-1.0" to "2.1"
+
+see: https://support.mozilla.org/en-US/questions/1269224#answer-1282444
+
+*** Account setting
+
+For email account of outlook.
+
+Receiving:
+- Server Type: IMAP Mail Server
+- Server Name: outlook.office365.com
+- Port: 993
+- Connection security: SSL/TLS
+
+Sending:
+- Server Type: SMTP Server
+- Server Name: outlook.office365.com
+- Port: 587
+- Connection security: STARTTLS
+
+** Firefox
+https://www.mozilla.org/
+
+Firefox is the fast, lightweight, privacy-focused browser that works
+across all your devices.
+
+*** Sepia theme
+https://addons.mozilla.org/firefox/addon/sepiafox/
+
+** ShareX
+https://getsharex.com/
+
+Screen capture, file sharing and productivity tool
+
+*** Audio Recording
+
+Task settings -> Screen recording options... -> Audio source
+
+** WinMerge
+https://winmerge.org/
+
+inMerge is an Open Source differencing and merging tool for
+Windows. WinMerge can compare both folders and files, presenting
+differences in a visual text format that is easy to understand and
+handle.
+
+** Double Commander
+https://doublecmd.sourceforge.io/
+
+Double Commander is a free cross platform open source file manager
+with two panels side by side. It is inspired by Total Commander and
+features some new ideas.
 
 * nsswitch.conf
 
