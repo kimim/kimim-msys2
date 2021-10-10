@@ -8,7 +8,7 @@ With this repo, I can have a uniform tools over Windows.
 
 The setting up steps:
 
-* Basic installation
+* Installation
 
 1. install msys2 to anywhere, for example, =C:\Users\kimim\msys64=
 2. add customizations from http://github.com/kimim/kimim-msys2
@@ -21,7 +21,7 @@ The setting up steps:
    git checkout -t origin/master
    #+end_src
 
-* Configure Windows
+* Windows Configure
 ** remap keys
 
 As an Emacs user, I prefer to remmap ~LShift~ to ~LCtrl~ and ~Caps~ to
@@ -232,6 +232,13 @@ across all your devices.
 
 *** Sepia theme
 https://addons.mozilla.org/firefox/addon/sepiafox/
+
+*** Dark Background and Light Text
+https://addons.mozilla.org/firefox/addon/dark-background-light-text
+
+This extension is useful, that you can switch between light color and
+night color for web pages. It is good to use together with emacs
+kimim-light-theme and kimim-night-theme.
 
 ** ShareX
 https://getsharex.com/
