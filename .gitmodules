@@ -1,0 +1,6 @@
+[submodule "plantuml-icon-font-sprites"]
+	path = kimikit/plantuml/plantuml-icon-font-sprites
+	url = git@github.com:tupadr3/plantuml-icon-font-sprites.git
+[submodule "C4-PlantUML"]
+	path = kimikit/plantuml/C4-PlantUML
+	url = git@github.com:plantuml-stdlib/C4-PlantUML.git
