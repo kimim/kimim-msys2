@@ -4,3 +4,6 @@
 [submodule "C4-PlantUML"]
 	path = kimikit/plantuml/C4-PlantUML
 	url = git@github.com:plantuml-stdlib/C4-PlantUML.git
+[submodule "kimim-emacs-everywhere"]
+	path = kimikit/autohotkey/kimim-emacs-everywhere
+	url = git@github.com:kimim/kimim-emacs-everywhere.git
