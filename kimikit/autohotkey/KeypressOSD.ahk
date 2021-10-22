@@ -217,12 +217,12 @@ GetKeyStr() {
 
 		static pre_prefix, pre_key, keyCount := 1
 		global tickcount_start
-		if (prefix && pre_prefix) && (A_TickCount-tickcount_start < 300) {
+		if (A_TickCount-tickcount_start < 300) {
 			if (prefix != pre_prefix) {
 				result := pre_prefix pre_key ", " prefix key
 			} else {
 				keyCount := (key=pre_key) ? (keyCount+1) : 1
-				key := (keyCount>2) ? (key " (" keyCount ")") : (pre_key ", " key)
+				key := (keyCount>2) ? (key " (" keyCount ")") : (pre_key ", " prefix . key)
 			}
 		} else {
 			keyCount := 1
