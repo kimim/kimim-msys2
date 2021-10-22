@@ -19,6 +19,8 @@ The setting up steps:
    git fetch
    git reset origin/master
    git checkout -t origin/master
+   git submodule init
+   git submodule update
    #+end_src
 
 * Windows Configure
@@ -135,6 +137,8 @@ lein
 #+end_src
 
 * Applications
+** AutoHotkey
+** Rime & Weasel
 ** Inkscape
 https://inkscape.org/
 
