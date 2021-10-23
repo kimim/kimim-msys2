@@ -10,6 +10,6 @@
 [submodule "beamertheme-kimim"]
 	path = texlive/texmf-local/tex/latex/beamertheme-kimim
 	url = git@github.com:kimim/beamertheme-kimim.git
-[submodule "home/kimim-emacs"]
+[submodule "kimim-emacs"]
 	path = home/kimim-emacs
 	url = git@github.com:kimim/kimim-emacs.git
