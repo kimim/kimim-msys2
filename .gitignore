@@ -29,3 +29,11 @@ clang64.ico
 clang64.ini
 components.xml
 installerResources
+
+local-shell.bat
+local-emacs-server.bat
+local-emacs-server.vbs
+local-emacs.bat
+local-emacs.vbs
+local-emacsclient.bat
+local-emacsclient.vbs
