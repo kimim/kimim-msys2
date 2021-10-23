@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="0.9.10 beta" ConfigVersion="10">
+<doublecmd DCVersion="1.0.0 beta" ConfigVersion="12">
   <Configuration Save="True" SortOrder="0" TreeType="0">
     <UseConfigInProgramDir>True</UseConfigInProgramDir>
     <FolderTabs Save="False"/>
@@ -45,6 +45,12 @@
       <Error>255</Error>
       <Success>32768</Success>
     </LogWindow>
+    <PathLabel>
+      <ActiveColor>-2147483635</ActiveColor>
+      <ActiveFontColor>-2147483634</ActiveFontColor>
+      <InactiveColor>-2147483633</InactiveColor>
+      <InactiveFontColor>-2147483630</InactiveFontColor>
+    </PathLabel>
   </Colors>
   <Toolbars>
     <MainToolbar>
@@ -64,7 +70,9 @@
           <Icon>cm_options</Icon>
           <Command>cm_Options</Command>
         </Command>
-        <Separator/>
+        <Separator>
+          <Style>False</Style>
+        </Separator>
         <Command>
           <ID>{D3E1D7DF-7CA8-4FA3-BC85-864DDDB9EF39}</ID>
           <Icon>cm_briefview</Icon>
@@ -80,13 +88,17 @@
           <Icon>cm_thumbnailsview</Icon>
           <Command>cm_ThumbnailsView</Command>
         </Command>
-        <Separator/>
+        <Separator>
+          <Style>False</Style>
+        </Separator>
         <Command>
           <ID>{0151928C-3A82-463D-902C-90E7B6A3FAAE}</ID>
           <Icon>cm_flatview</Icon>
           <Command>cm_FlatView</Command>
         </Command>
-        <Separator/>
+        <Separator>
+          <Style>False</Style>
+        </Separator>
         <Command>
           <ID>{C1A87306-A827-484F-AB36-0193409CDAD1}</ID>
           <Icon>cm_viewhistoryprev</Icon>
@@ -97,7 +109,9 @@
           <Icon>cm_viewhistorynext</Icon>
           <Command>cm_ViewHistoryNext</Command>
         </Command>
-        <Separator/>
+        <Separator>
+          <Style>False</Style>
+        </Separator>
         <Command>
           <ID>{C5B6FBC1-C951-4F84-A8B1-6AB6BDAAA53D}</ID>
           <Icon>cm_markplus</Icon>
@@ -113,7 +127,9 @@
           <Icon>cm_markinvert</Icon>
           <Command>cm_MarkInvert</Command>
         </Command>
-        <Separator/>
+        <Separator>
+          <Style>False</Style>
+        </Separator>
         <Command>
           <ID>{27FF39BA-CE88-4CDC-BAC7-475B5C283FEB}</ID>
           <Icon>cm_packfiles</Icon>
@@ -124,7 +140,9 @@
           <Icon>cm_extractfiles</Icon>
           <Command>cm_ExtractFiles</Command>
         </Command>
-        <Separator/>
+        <Separator>
+          <Style>False</Style>
+        </Separator>
         <Command>
           <ID>{50DC776A-FD30-427B-9594-20C6B169E247}</ID>
           <Icon>cm_search</Icon>
