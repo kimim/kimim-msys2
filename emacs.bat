@@ -1,4 +1,6 @@
 @echo off
+
+set HOME=%~dp0home
 rem change home path by adding below line
 rem set HOME=%USERPROFILE%\home
 set MSYS_ROOT=%~dp0
