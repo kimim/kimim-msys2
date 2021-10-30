@@ -1,0 +1,9 @@
+#!/bin/sh
+tar -zcvf msys64.tar.gz     \
+    --exclude='home/.ssh'   \
+    --exclude='home/Temp'   \
+    --exclude='home/notes'  \
+    --exclude='home/org'    \
+    --exclude='tmp'         \
+    --exclude='var/cache'   \
+    --exclude='msys64.tar.gz' .
