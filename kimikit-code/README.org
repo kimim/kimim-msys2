@@ -1,0 +1,24 @@
+* Emacs
+#+begin_src sh
+./configure --with-json --with-w32 --without-dbus
+make
+# Install
+make install prefix=/kimikit/emacs
+#+end_src
+
+* freeplane
+#+begin_src sh
+# Compile
+gradle windowsPortableInstaller
+# Install
+cp BIN/* ../kimikit/freeplane/ -r
+#+end_src
+
+* AutoHotkey
+vs 2019
+
+* sumatrapdf
+vs 2019
+
+* PlantUML
+ant
