@@ -1,10 +1,13 @@
-* Emacs
+* emacs
 #+begin_src sh
 ./configure --with-json --with-w32 --without-dbus
 make
 # Install
 make install prefix=/kimikit/emacs
 #+end_src
+
+* autohotkey
+vs 2019
 
 * freeplane
 #+begin_src sh
@@ -14,9 +17,6 @@ gradle windowsPortableInstaller
 cp BIN/* /kimikit/freeplane/ -r
 #+end_src
 
-* AutoHotkey
-vs 2019
-
 * sumatrapdf
 vs 2019
 
@@ -25,7 +25,15 @@ vs 2019
 cp out/rel64/SumatraPDF.exe /kimikit/sumatrapdf/
 #+end_src
 
-* PlantUML
+* drawio
+
+#+begin_src sh
+git clone --recursive git@github.com:jgraph/drawio-desktop.git
+npm.cmd install
+npm.cmd start
+#+end_src
+
+* plantuml
 ant
 #+begin_src sh
 # Install
