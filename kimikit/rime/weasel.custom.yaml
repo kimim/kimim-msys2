@@ -6,7 +6,7 @@ customization:
   rime_version: 1.5.3
 patch:
   app_options:
-# 只支持小写字母的app名字！
+# app名称要全部字母都小写！
     cmd.exe: {ascii_mode: true}
     emacs.exe: {ascii_mode: true}
     emacsclientw.exe: {ascii_mode: true}
@@ -15,6 +15,7 @@ patch:
     mintty.exe: {ascii_mode: true}
     run.exe: {ascii_mode: true}
     searchui.exe: {ascii_mode: true}    # used as a shortcut for app
+    searchapp.exe: {ascii_mode: true}   # used as a shortcut for app
     firefox.exe: {ascii_mode: true}     # I search for tech english more often
   "style/color_scheme": google
   "style/display_tray_icon": true

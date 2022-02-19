@@ -19,3 +19,6 @@ patch:
       '~' : '~'
       '*' : '*'                           # reserved for org-mode heading
       '#' : ['#', ＊, ·, ・, ×, ※, ❂ ]  # help * to load some symbols
+  ascii_composer:
+    switch_key:
+      Shift_L: commit_code
