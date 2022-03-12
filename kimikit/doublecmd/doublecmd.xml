@@ -60,6 +60,14 @@
           <Icon>cm_refresh</Icon>
           <Command>cm_Refresh</Command>
         </Command>
+        <Program>
+          <ID>{A0C0E4FC-01B0-498A-AE85-640181051B0E}</ID>
+          <Icon>C:\Windows\explorer.exe</Icon>
+          <Hint>explorer</Hint>
+          <Command>C:\Windows\explorer.exe</Command>
+          <Params>%ds</Params>
+          <StartPath>C:\Windows\</StartPath>
+        </Program>
         <Command>
           <ID>{EC9038BA-503A-4AF4-A882-E0FB81632F09}</ID>
           <Icon>cm_runterm</Icon>
@@ -168,30 +176,38 @@
         </Separator>
         <Program>
           <ID>{F8D6309F-C133-4E0B-A000-68A004FC65FB}</ID>
-          <Icon>%MSYS_ROOT%\kimikit\inkscape\bin\inkscape.exe</Icon>
+          <Icon>%MSYS64_PATH%\kimikit\inkscape\share\icons\hicolor\32x32\apps\org.inkscape.Inkscape.png</Icon>
           <Hint>inkscape</Hint>
-          <Command>%MSYS_ROOT%\kimikit\inkscape\bin\inkscape.exe</Command>
+          <Command>%MSYS64_PATH%\kimikit\inkscape\bin\inkscape.exe</Command>
           <Params>%ps</Params>
         </Program>
         <Program>
           <ID>{D1B8BA95-D64E-4C93-BFF4-D31CF7B90254}</ID>
-          <Icon>%MSYS_ROOT%\kimikit\inkscape\share\icons\Adwaita\256x256\mimetypes\x-package-repository.png</Icon>
+          <Icon>%MSYS64_PATH%\kimikit\inkscape\share\icons\Adwaita\256x256\mimetypes\x-package-repository.png</Icon>
           <Hint>Export SVG to PDF</Hint>
-          <Command>%MSYS_ROOT%\kimikit\inkscape\bin\inkscape.exe</Command>
+          <Command>%MSYS64_PATH%\kimikit\inkscape\bin\inkscape.exe</Command>
           <Params>--export-filename=%d/%o.pdf  %p</Params>
         </Program>
         <Program>
+          <ID>{ABDE8373-C266-4646-B0D7-74F105C03B1F}</ID>
+          <Icon>%MSYS64_PATH%\kimikit\icon\svg.png</Icon>
+          <Hint>Export PDF to SVG</Hint>
+          <Command>%MSYS64_PATH%\kimikit\inkscape\bin\inkscape.exe</Command>
+          <Params>--export-filename=%d/%o.svg %p</Params>
+        </Program>
+        <Program>
           <ID>{662AB474-D129-463C-8430-AFD24657021E}</ID>
-          <Icon>%MSYS_ROOT%\kimikit\emacs\bin\emacsclientw.exe</Icon>
+          <Icon>%MSYS64_PATH%\kimikit\emacs\bin\emacsclientw.exe</Icon>
           <Hint>emacsclientw</Hint>
-          <Command>%MSYS_ROOT%\emacsclient.bat</Command>
+          <Command>%MSYS64_PATH%\kimikit\emacs\bin\emacsclientw.exe</Command>
           <Params>%p</Params>
+          <StartPath>%MSYS64_PATH%\kimikit\emacs\bin\</StartPath>
         </Program>
         <Program>
           <ID>{0FD04844-9C0A-425B-B281-A4D4F00F399B}</ID>
-          <Icon>%MSYS_ROOT%\kimikit\gimp\bin\gimp-2.10.exe</Icon>
+          <Icon>%MSYS64_PATH%\kimikit\gimp\bin\gimp-2.10.exe</Icon>
           <Hint>gimp-2.10</Hint>
-          <Command>%MSYS_ROOT%\kimikit\gimp\bin\gimp-2.10.exe</Command>
+          <Command>%MSYS64_PATH%\kimikit\gimp\bin\gimp-2.10.exe</Command>
           <Params>%ps</Params>
         </Program>
       </Row>
@@ -331,7 +347,7 @@
     <DateTimeFormat>yyyy/M/d hh:nn:ss</DateTimeFormat>
     <CutTextToColumnWidth>True</CutTextToColumnWidth>
     <ExtendCellWidth>False</ExtendCellWidth>
-    <ShowSystemFiles>False</ShowSystemFiles>
+    <ShowSystemFiles>True</ShowSystemFiles>
     <ListFilesInThread>True</ListFilesInThread>
     <LoadIconsSeparately>True</LoadIconsSeparately>
     <DelayLoadingTabs>True</DelayLoadingTabs>
@@ -1106,6 +1122,11 @@
         <ArchiveExt>zst</ArchiveExt>
         <Path>%commander_path%\plugins\wcx\zip\zip.wcx</Path>
         <Flags>91</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>b64</ArchiveExt>
+        <Path>%commander_path%\plugins\wcx\base64\base64.wcx</Path>
+        <Flags>1</Flags>
       </WcxPlugin>
     </WcxPlugins>
     <WdxPlugins>

@@ -182,15 +182,16 @@ export LC_NUMERIC=en_US.UTF-8
 # export JAVA_TOOL_OPTIONS="-Duser.language=en            \
 #        -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=1080 \
 #        -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=1080"
-export JAVA_HOME=`cygpath -w /usr/local/lib/graalvm-ce-java11-21.0.0`
+export JAVA_HOME=`cygpath -w /java/graalvm-ce-java11-21.0.0`
 
 # java option microsoft jdk
 # export PATH=$PATH:/kimikit/jdk-16.0.2+7/bin # JDK
 # java option graalvm jdk and js
-export PATH=$PATH:/usr/local/lib/graalvm-ce-java11-21.0.0/bin/
-export PATH=$PATH:/usr/local/lib/graalvm-ce-java11-21.0.0/languages/js/bin/
-export PATH=$PATH:/usr/local/lib/gradle-7.2/bin/
-export PATH=$PATH:/usr/local/lib/apache-maven-3.8.3/bin/
+export PATH=$PATH:/java/graalvm-ce-java11-21.0.0/bin/
+export PATH=$PATH:/java/graalvm-ce-java11-21.0.0/languages/js/bin/
+export PATH=$PATH:/java/gradle-7.2/bin/
+export PATH=$PATH:/java/apache-maven-3.8.3/bin/
+export PATH=$PATH:/java/apache-ant-1.10.11/bin
 
 # latex option: miktex
 # export PATH=$PATH:/CTEX/MiKTeX/miktex/bin
@@ -207,8 +208,6 @@ export PATH=$PATH:/c/Windows/system32/WindowsPowerShell/v1.0
 export PATH=$PATH:/c/Windows/system32
 
 export INFOPATH=$INFOPATH:/mingw64/share/info
-export PATH=$PATH:/usr/local/lib/apache-ant-1.10.11/bin
-export PATH=$PATH:/usr/local/lib/apache-maven-3.8.1/bin
 export PATH=$PATH:/kimikit/inkscape/bin:/kimikit/doublecmd:/kimikit/firefox
 export PATH=$PATH:/kimikit/LilyPond/usr/bin
 export PATH=/kimikit/emacs/bin:$PATH
@@ -217,7 +216,8 @@ alias syu="pacman -Syu"
 # export https_proxy=127.0.0.1:1080
 # export http_proxy=127.0.0.1:1080
 
-export PATH=$PATH:/i386/bin
+export PATH=$PATH:/x86_64/bin
+export PATH=$PATH:/i686/bin
 
 proxy_kimim()
 {
@@ -232,3 +232,6 @@ proxy_off()
     export http_proxy=""
     export JAVA_TOOL_OPTIONS=""
 }
+
+# alias pdf2svg="pdftocairo.exe -svg"
+alias pdf2svg="inkscape -o"
