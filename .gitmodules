@@ -13,3 +13,9 @@
 [submodule "kimim-emacs"]
 	path = home/kimim-emacs
 	url = git@github.com:kimim/kimim-emacs.git
+[submodule "kimikit-code/emacs"]
+	path = kimikit-code/emacs
+	url = git@github.com:emacs-mirror/emacs.git
+[submodule "kimikit-code/plantuml"]
+	path = kimikit-code/plantuml
+	url = git@github.com:plantuml/plantuml.git

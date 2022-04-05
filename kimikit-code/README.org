@@ -26,11 +26,26 @@ cp out/rel64/SumatraPDF.exe /kimikit/sumatrapdf/
 #+end_src
 
 * drawio
-
+get src code
 #+begin_src sh
 git clone --recursive git@github.com:jgraph/drawio-desktop.git
-npm.cmd install
-npm.cmd start
+#+end_src
+
+prepare
+- install nodejs
+- export PATH
+- npm install -g yarn
+
+Compile
+#+begin_src sh
+git submodule update --recursive
+yarn install
+cd drawio/src/main/webapp
+yarn install
+cd ../..
+yarn run sync
+yarn run release-win
+cp ./dist/win-unpacked/* /kimikit/draw.io/ -r
 #+end_src
 
 * plantuml
@@ -39,3 +54,8 @@ ant
 # Install
 cp plantuml.jar /kimikit/plantuml/
 #+end_src
+
+* doublecmd
+
+set LAZARUS_HOME=d:\path\to\my\Lazarus
+build.bat

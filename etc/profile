@@ -193,6 +193,8 @@ export PATH=$PATH:/java/gradle-7.2/bin/
 export PATH=$PATH:/java/apache-maven-3.8.3/bin/
 export PATH=$PATH:/java/apache-ant-1.10.11/bin
 
+export PATH=/kimikit/node:$PATH
+
 # latex option: miktex
 # export PATH=$PATH:/CTEX/MiKTeX/miktex/bin
 # latex option: texlive

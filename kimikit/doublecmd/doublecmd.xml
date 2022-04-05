@@ -189,6 +189,13 @@
           <Params>--export-filename=%d/%o.pdf  %p</Params>
         </Program>
         <Program>
+          <ID>{F71C5EB5-8295-480F-B70E-0AD2292C8EC8}</ID>
+          <Icon>%MSYS64_PATH%\kimikit\inkscape\share\icons\Adwaita\256x256\legacy\applications-graphics.png</Icon>
+          <Hint>Export SVG to PNG</Hint>
+          <Command>%MSYS64_PATH%\kimikit\inkscape\bin\inkscape.exe</Command>
+          <Params>-d 300 --export-filename=%d/%o.png  %p</Params>
+        </Program>
+        <Program>
           <ID>{ABDE8373-C266-4646-B0D7-74F105C03B1F}</ID>
           <Icon>%MSYS64_PATH%\kimikit\icon\svg.png</Icon>
           <Hint>Export PDF to SVG</Hint>
