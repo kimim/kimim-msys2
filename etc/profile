@@ -182,14 +182,16 @@ export LC_NUMERIC=en_US.UTF-8
 # export JAVA_TOOL_OPTIONS="-Duser.language=en            \
 #        -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=1080 \
 #        -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=1080"
-export JAVA_HOME=`cygpath -w /java/graalvm-ce-java11-21.0.0`
+# export JAVA_HOME=`cygpath -w /java/graalvm-ce-java11-22.1.0`
+export JAVA_HOME=`cygpath -w /java/jdk-15`
 
-# java option microsoft jdk
-# export PATH=$PATH:/kimikit/jdk-16.0.2+7/bin # JDK
+# java option openjdk
+# freeplane requires jdk 15
+export PATH=$PATH:/java/jdk-15/bin
 # java option graalvm jdk and js
-export PATH=$PATH:/java/graalvm-ce-java11-21.0.0/bin/
-export PATH=$PATH:/java/graalvm-ce-java11-21.0.0/languages/js/bin/
-export PATH=$PATH:/java/gradle-7.2/bin/
+#export PATH=$PATH:/java/graalvm-ce-java11-22.1.0/bin/
+#export PATH=$PATH:/java/graalvm-ce-java11-22.1.0/languages/js/bin/
+export PATH=$PATH:/java/gradle-7.5/bin/
 export PATH=$PATH:/java/apache-maven-3.8.3/bin/
 export PATH=$PATH:/java/apache-ant-1.10.11/bin
 
