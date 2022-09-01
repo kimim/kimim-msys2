@@ -183,17 +183,17 @@ export LC_NUMERIC=en_US.UTF-8
 #        -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=1080 \
 #        -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=1080"
 # export JAVA_HOME=`cygpath -w /java/graalvm-ce-java11-22.1.0`
-export JAVA_HOME=`cygpath -w /java/jdk-15`
+export JAVA_HOME=`cygpath -w /kimikit/java/jdk-15`
 
 # java option openjdk
 # freeplane requires jdk 15
-export PATH=$PATH:/java/jdk-15/bin
+export PATH=$PATH:/kimikit/java/jdk-15/bin
 # java option graalvm jdk and js
 #export PATH=$PATH:/java/graalvm-ce-java11-22.1.0/bin/
 #export PATH=$PATH:/java/graalvm-ce-java11-22.1.0/languages/js/bin/
-export PATH=$PATH:/java/gradle-7.5/bin/
-export PATH=$PATH:/java/apache-maven-3.8.3/bin/
-export PATH=$PATH:/java/apache-ant-1.10.11/bin
+export PATH=$PATH:/kimikit/java/gradle-7.5/bin/
+export PATH=$PATH:/kimikit/java/apache-maven-3.8.3/bin/
+export PATH=$PATH:/kimikit/java/apache-ant-1.10.11/bin
 
 export PATH=/kimikit/node:$PATH
 
@@ -220,8 +220,8 @@ alias syu="pacman -Syu"
 # export https_proxy=127.0.0.1:1080
 # export http_proxy=127.0.0.1:1080
 
-export PATH=$PATH:/x86_64/bin
-export PATH=$PATH:/i686/bin
+export PATH=$PATH:/kimikit/x86_64/bin
+export PATH=$PATH:/kimikit/i686/bin
 
 proxy_kimim()
 {
