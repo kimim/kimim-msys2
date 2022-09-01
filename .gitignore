@@ -29,6 +29,16 @@ clang64.ico
 clang64.ini
 components.xml
 installerResources
+InstallationLog.txt
+clang32.exe
+clang32.ico
+clang32.ini
+clangarm64.ico
+installer.dat
+network.xml
+uninstall.dat
+uninstall.exe
+uninstall.ini
 
 local-shell.bat
 local-emacs-server.bat

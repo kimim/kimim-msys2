@@ -1,0 +1,7 @@
+Font=Consolas
+FontHeight=16
+Scrollbar=none
+BackgroundColour=20,20,20
+Columns=100
+Rows=30
+Term=xterm-256color
