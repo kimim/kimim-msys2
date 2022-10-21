@@ -1,21 +1,6 @@
-[submodule "plantuml-icon-font-sprites"]
-	path = kimikit/plantuml/plantuml-icon-font-sprites
-	url = git@github.com:tupadr3/plantuml-icon-font-sprites.git
-[submodule "C4-PlantUML"]
-	path = kimikit/plantuml/C4-PlantUML
-	url = git@github.com:plantuml-stdlib/C4-PlantUML.git
 [submodule "kimim-emacs-everywhere"]
 	path = kimikit/autohotkey/kimim-emacs-everywhere
 	url = git@github.com:kimim/kimim-emacs-everywhere.git
 [submodule "beamertheme-kimim"]
 	path = texlive/texmf-local/tex/latex/beamertheme-kimim
 	url = git@github.com:kimim/beamertheme-kimim.git
-[submodule "kimikit-code/emacs"]
-	path = kimikit-code/emacs
-	url = git@github.com:emacs-mirror/emacs.git
-[submodule "kimikit-code/plantuml"]
-	path = kimikit-code/plantuml
-	url = git@github.com:plantuml/plantuml.git
-[submodule "home/kimim-emacs"]
-	path = home/kimim-emacs
-	url = git@github.com:kimim/kimim-emacs.git
