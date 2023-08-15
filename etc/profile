@@ -183,14 +183,15 @@ export LC_NUMERIC=en_US.UTF-8
 #        -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=1080 \
 #        -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=1080"
 # export JAVA_HOME=`cygpath -w /java/graalvm-ce-java11-22.1.0`
-export JAVA_HOME=`cygpath -w /kimikit/java/jdk-15`
+export JAVA_HOME=`cygpath -w /kimikit/java/jdk-17.0.8+7`
 
 # java option openjdk
 # freeplane requires jdk 15
-export PATH=$PATH:/kimikit/java/jdk-15/bin
+export PATH=$PATH:/kimikit/java/jdk-17.0.8+7/bin
 # java option graalvm jdk and js
 #export PATH=$PATH:/java/graalvm-ce-java11-22.1.0/bin/
 #export PATH=$PATH:/java/graalvm-ce-java11-22.1.0/languages/js/bin/
+
 export PATH=$PATH:/kimikit/java/gradle-7.5/bin/
 export PATH=$PATH:/kimikit/java/apache-maven-3.8.3/bin/
 export PATH=$PATH:/kimikit/java/apache-ant-1.10.11/bin
@@ -200,7 +201,7 @@ export PATH=/kimikit/node:$PATH
 # latex option: miktex
 # export PATH=$PATH:/CTEX/MiKTeX/miktex/bin
 # latex option: texlive
-export PATH=$PATH:/texlive/2021/bin/win32
+export PATH=$PATH:/texlive/2023/bin/windows
 
 # export PATH=$PATH:$(cygpath $(go env GOPATH))/bin
 
@@ -210,8 +211,9 @@ export PATH=$PATH:/c/Windows/system32/WindowsPowerShell/v1.0
 # add system32 to let texlive find cmd.exe, then pygmentize can work
 # see https://tex.stackexchange.com/questions/347833/tex-live-on-windows-2016-cannot-find-pygmentize
 export PATH=$PATH:/c/Windows/system32
+export PATH=$PATH:/ucrt64/bin
 
-export INFOPATH=$INFOPATH:/mingw64/share/info
+export INFOPATH=$INFOPATH:/ucrt64/share/info:/kimikit/emacs/share/info
 export PATH=$PATH:/kimikit/inkscape/bin:/kimikit/doublecmd:/kimikit/firefox
 export PATH=$PATH:/kimikit/LilyPond/usr/bin
 export PATH=/kimikit/emacs/bin:$PATH
@@ -238,4 +240,4 @@ proxy_off()
 }
 
 # alias pdf2svg="pdftocairo.exe -svg"
-alias pdf2svg="inkscape -o"
+# alias pdf2svg="inkscape -o"
