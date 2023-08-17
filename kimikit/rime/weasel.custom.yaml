@@ -2,23 +2,24 @@ customization:
   distribution_code_name: Weasel
   distribution_version: 0.14.3
   generator: "Weasel::UIStyleSettings"
-  modified_time: "Thu Apr 15 10:34:05 2021"
+  modified_time: "Fri Jun  2 20:34:56 2023"
   rime_version: 1.5.3
 patch:
   app_options:
-# app名称要全部字母都小写！
     cmd.exe: {ascii_mode: true}
-    emacs.exe: {ascii_mode: true}
-    emacsclientw.exe: {ascii_mode: true}
     doublecmd.exe: {ascii_mode: true}
-    sumatrapdf.exe: {ascii_mode: true}  # no need for chinese input
+#    emacs.exe: {ascii_mode: true}
+#    emacsclientw.exe: {ascii_mode: true}
+    firefox.exe: {ascii_mode: true}
     mintty.exe: {ascii_mode: true}
+    powertoys.powerlauncher.exe: {ascii_mode: true}
     run.exe: {ascii_mode: true}
-    searchui.exe: {ascii_mode: true}    # used as a shortcut for app
-    searchapp.exe: {ascii_mode: true}   # used as a shortcut for app
-    firefox.exe: {ascii_mode: true}     # I search for tech english more often
-  "style/color_scheme": google
-  "style/display_tray_icon": true
+    searchapp.exe: {ascii_mode: true}
+    searchui.exe: {ascii_mode: true}
+    sumatrapdf.exe: {ascii_mode: true}
+    youdaodict.exe: {ascii_mode: true}
+  "style/color_scheme": steam
+  "style/display_tray_icon": false
   "style/horizontal": true
   "style/inline_preedit": false
   "switches/@0/reset": 1

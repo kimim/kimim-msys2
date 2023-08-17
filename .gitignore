@@ -49,3 +49,4 @@ local-emacsclient.bat
 local-emacsclient.vbs
 /ucrt64/
 /clangarm64.ini
+/clangarm64.exe
