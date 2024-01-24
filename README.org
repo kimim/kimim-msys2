@@ -316,3 +316,9 @@ pacman -S openssh-netcat
 
 - Before backup, remove files under ~/var/cache/pacman/pkg/~
 - compress files excludes: ~home~, ~texlive~ and ~tmp~
+* History
+** [2024-01-24 Wed]
+- start to keep history log for each update
+- add ~IgnorePkg = gnupg~ to ~/etc/pacman.conf~ to ignore update to gnupg,
+  because latest gnupg does not work with emacs.
+- update kimim-emacs-everywhere

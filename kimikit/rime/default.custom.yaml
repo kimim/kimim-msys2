@@ -2,15 +2,10 @@ customization:
   distribution_code_name: Weasel
   distribution_version: 0.14.3
   generator: "Rime::SwitcherSettings"
-  modified_time: "Wed Apr 26 19:11:09 2023"
+  modified_time: "Tue Dec 26 07:43:49 2023"
   rime_version: 1.5.3
 patch:
-  punctuator:
-    full_shape: {__include: "punctuation:/full_shape"}
-    half_shape: {"#": ["#", "＊", "·", "・", "×", "※", "❂"], "*": "*", "/": "/", "\\": "、", __include: "punctuation:/half_shape", "`": ["、", "\\", "＼", "／", "÷"], "~": "~"}
+  ascii_composer:
+    switch_key: {Shift_L: noop, Shift_R: commit_code}
   schema_list:
     - {schema: rime_ice}
-  ascii_composer:
-    switch_key:
-      Shift_L: noop # clear
-      Shift_R: commit_code

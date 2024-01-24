@@ -6,6 +6,7 @@ customization:
   rime_version: 1.5.3
 patch:
   app_options:
+    outlook.exe: {ascii_mode: true}
     cmd.exe: {ascii_mode: true}
     doublecmd.exe: {ascii_mode: true}
     emacs.exe: {ascii_mode: true}
