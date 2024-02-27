@@ -189,23 +189,23 @@ export LC_NUMERIC=en_US.UTF-8
 # freeplane requires jdk 15
 # export JAVA_HOME=`cygpath -w /kimikit/java/jdk-17.0.8+7`
 # export PATH=$PATH:/kimikit/java/jdk-17.0.8+7/bin
-export JAVA_HOME=`cygpath -w /kimikit/java/jdk-15`
-export PATH=$PATH:/kimikit/java/jdk-15/bin
+export JAVA_HOME=`cygpath -w /kimikit/jdk`
+export PATH=$PATH:/kimikit/jdk/bin
 
 # java option graalvm jdk and js
 # export JAVA_HOME=`cygpath -w /kimikit/java/graalvm-ce-java11-22.1.0`
 # export PATH=$PATH:/kimikit/java/graalvm-ce-java11-22.1.0/bin/
 # export PATH=$PATH:/kimikit/java/graalvm-ce-java11-22.1.0/languages/js/bin/
 
-export PATH=$PATH:/kimikit/java/gradle-7.5/bin/
-export PATH=$PATH:/kimikit/java/apache-maven-3.8.3/bin/
-export PATH=$PATH:/kimikit/java/apache-ant-1.10.11/bin
+export PATH=$PATH:/kimikit/gradle/bin/
+export PATH=$PATH:/kimikit/apache-maven/bin/
+export PATH=$PATH:/kimikit/apache-ant/bin
 
 # RUST
 export PATH=`cygpath -u $USERPROFILE`/.cargo/bin:$PATH
 
 # R
-export PATH=/kimikit/R-4.3.1/bin:$PATH
+export PATH=/kimikit/R/bin:$PATH
 
 # NodeJS
 # export PATH=/kimikit/node:$PATH
