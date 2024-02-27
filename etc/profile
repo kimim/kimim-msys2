@@ -236,6 +236,7 @@ alias syu="pacman -Syu"
 
 export PATH=$PATH:/kimikit/x86_64/bin
 export PATH=$PATH:/kimikit/i686/bin
+export PATH=$PATH:/kimikit/bin
 
 proxy_kimim()
 {
