@@ -1,6 +1,0 @@
-REGEDIT4
-
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM]
-
-"AccentColor"=dword:ffcd5f3a
-"AccentColorInactive"=dword:338b4027
