@@ -4,3 +4,6 @@
 [submodule "beamertheme-hippo"]
 	path = texlive/texmf-local/tex/latex/beamertheme-hippo
 	url = git@github.com:kimim/beamertheme-hippo.git
+[submodule "rime-ice"]
+	path = kimikit/rime
+	url = git@github.com:iDvel/rime-ice.git
