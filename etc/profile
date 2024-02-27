@@ -227,7 +227,7 @@ export PATH=$PATH:/ucrt64/bin
 
 export INFOPATH=$INFOPATH:/ucrt64/share/info:/kimikit/emacs/share/info
 export PATH=$PATH:/kimikit/inkscape/bin:/kimikit/doublecmd:/kimikit/firefox
-export PATH=$PATH:/kimikit/LilyPond/usr/bin
+export PATH=$PATH:/kimikit/LilyPond/usr/bin:/kimikit/lilypond-2.24.3/bin
 export PATH=/kimikit/emacs/bin:$PATH
 
 alias syu="pacman -Syu"
