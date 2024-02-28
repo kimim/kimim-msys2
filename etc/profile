@@ -217,13 +217,14 @@ export PATH=$PATH:/texlive/2023/bin/windows
 
 # export PATH=$PATH:$(cygpath $(go env GOPATH))/bin
 
+export PATH=$PATH:/ucrt64/bin
+
 # powershell.exe is needed for cider-jack-in, DO NOT REMOVE
 export PATH=$PATH:/c/Windows/system32/WindowsPowerShell/v1.0
 
 # add system32 to let texlive find cmd.exe, then pygmentize can work
 # see https://tex.stackexchange.com/questions/347833/tex-live-on-windows-2016-cannot-find-pygmentize
 export PATH=$PATH:/c/Windows/system32
-export PATH=$PATH:/ucrt64/bin
 
 export INFOPATH=$INFOPATH:/ucrt64/share/info:/kimikit/emacs/share/info
 export PATH=$PATH:/kimikit/inkscape/bin:/kimikit/doublecmd:/kimikit/firefox
@@ -237,6 +238,7 @@ alias syu="pacman -Syu"
 export PATH=$PATH:/kimikit/x86_64/bin
 export PATH=$PATH:/kimikit/i686/bin
 export PATH=$PATH:/kimikit/bin
+export PATH=$PATH:/kimikit/drawio
 
 proxy_kimim()
 {
